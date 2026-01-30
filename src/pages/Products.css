@@ -1,0 +1,302 @@
+.products {
+  padding-top: 125px;
+}
+
+/* Products Hero */
+.products-hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.page-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Products Section */
+.products-section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.product-detail-card {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid var(--primary-color);
+}
+
+.product-detail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(52, 147, 191, 0.2);
+}
+
+.product-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.product-icon-large {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.product-icon-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-header h2 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.product-description {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.product-features h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.product-features ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.product-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--text-light);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.feature-check {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.product-enquiry-actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  border-color: #25d366;
+  color: white;
+}
+
+.btn-whatsapp:hover {
+  background: #1eb055;
+  border-color: #1eb055;
+}
+
+.btn-outline-enquiry {
+  background: transparent;
+  color: var(--secondary-color);
+  border-color: rgba(255, 255, 255, 0.8);
+  border-color: var(--secondary-color);
+}
+
+.btn-outline-enquiry:hover {
+  background: var(--secondary-color);
+  color: white;
+}
+
+/* Products Approach */
+.products-approach {
+  padding: 5rem 0;
+  background: var(--bg-light);
+}
+
+.approach-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.approach-content h2 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.approach-content > p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.9;
+  margin-bottom: 3rem;
+}
+
+.philosophy-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.philosophy-point {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.philosophy-point:hover {
+  transform: translateY(-5px);
+}
+
+.philosophy-point h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.philosophy-point p {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* Products CTA */
+.products-cta {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.cta-content p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  line-height: 1.7;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: white;
+  color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-large {
+  padding: 1.125rem 2.5rem;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .product-detail-card {
+    padding: 2rem;
+  }
+
+  .product-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-header h2 {
+    font-size: 2rem;
+  }
+
+  .product-icon-large {
+    width: 80px;
+    height: 80px;
+    font-size: 3rem;
+  }
+
+  .product-features ul {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-points {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-content h2,
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+}
