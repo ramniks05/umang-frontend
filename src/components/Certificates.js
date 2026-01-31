@@ -1,52 +1,38 @@
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import './Certificates.css';
 
 const Certificates = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
 
-  // Dummy certificate data - will be replaced with admin panel integration
   const certificates = [
     {
       id: 1,
-      name: 'ISO 9001:2015',
-      description: 'Quality Management System Certification',
-      category: 'Quality',
-      image: '/images/certificates/iso-9001.jpg' // Placeholder path
+      name: 'Udyam Registration',
+      description: 'MSME Registration – Ministry of Micro, Small and Medium Enterprises, Government of India',
+      category: 'MSME',
+      image: `${process.env.PUBLIC_URL}/images/certificates/udyam.png`
     },
     {
       id: 2,
       name: 'FSSAI License',
-      description: 'Food Safety and Standards Authority of India',
+      description: 'Food Safety and Standards Authority of India – License under FSS Act, 2006',
       category: 'Food Safety',
-      image: '/images/certificates/fssai.jpg' // Placeholder path
+      image: `${process.env.PUBLIC_URL}/images/certificates/fssai.png`
     },
     {
       id: 3,
-      name: 'Export License',
-      description: 'Authorized Export House Certification',
+      name: 'FIEO Registration',
+      description: 'Federation of Indian Export Organisations – Registration-Cum-Membership Certificate',
       category: 'Export',
-      image: '/images/certificates/export-license.jpg' // Placeholder path
+      image: `${process.env.PUBLIC_URL}/images/certificates/fieo.png`
     },
     {
       id: 4,
-      name: 'APEDA Registration',
-      description: 'Agricultural and Processed Food Products Export Development Authority',
+      name: 'Importer-Exporter Code (IEC)',
+      description: 'Directorate General of Foreign Trade – Ministry of Commerce and Industry, Government of India',
       category: 'Export',
-      image: '/images/certificates/apeda.jpg' // Placeholder path
-    },
-    {
-      id: 5,
-      name: 'GST Registration',
-      description: 'Goods and Services Tax Registration',
-      category: 'Compliance',
-      image: '/images/certificates/gst.jpg' // Placeholder path
-    },
-    {
-      id: 6,
-      name: 'IEC Code',
-      description: 'Import Export Code Certification',
-      category: 'Export',
-      image: '/images/certificates/iec.jpg' // Placeholder path
+      image: `${process.env.PUBLIC_URL}/images/certificates/iec.png`
     }
   ];
 
@@ -91,7 +77,7 @@ const Certificates = () => {
                   <span className="certificate-category">{certificate.category}</span>
                   <span className="view-certificate">
                     <span className="view-icon">👁</span>
-                    <span className="view-text">Click to view</span>
+                    <span className="view-text">View certificate</span>
                   </span>
                 </div>
               </div>
@@ -100,13 +86,13 @@ const Certificates = () => {
         </div>
       </section>
 
-      {/* Certificate Modal */}
-      {selectedCertificate && (
+      {/* Certificate Modal - rendered to body to avoid stacking/overflow issues */}
+      {selectedCertificate && ReactDOM.createPortal(
         <div 
           className="certificate-modal" 
           onClick={handleBackdropClick}
         >
-          <div className="certificate-modal-content">
+          <div className="certificate-modal-content" onClick={(e) => e.stopPropagation()}>
             <button 
               className="certificate-modal-close"
               onClick={closeModal}
@@ -128,10 +114,11 @@ const Certificates = () => {
               />
             </div>
             <p className="certificate-note">
-              * Certificate image will be displayed here. Upload certificate images to /public/images/certificates/ folder.
+              Official document. Verify authenticity via the respective government portal.
             </p>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );

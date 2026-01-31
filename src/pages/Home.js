@@ -13,21 +13,20 @@ const Home = () => {
           alt="Export Banner"
           className="hero-banner-image"
         />
-        <div className="hero-content">
-          <div className="hero-buttons">
-            <Link to="/about" className="btn btn-secondary">
-              Learn More
-            </Link>
-          </div>
-        </div>
       </section>
 
       {/* Key Highlights */}
       <section className="highlights">
+        <div className="highlights-bg-pattern" aria-hidden="true" />
         <div className="container">
-          <h2 className="section-title">Why Choose Exobase?</h2>
+          <div className="highlights-header">
+            <span className="highlights-badge">Our Advantages</span>
+            <h2 className="highlights-title">Why Choose Exobase?</h2>
+            <p className="highlights-subtitle">The export partner that delivers reliability, expertise, and results—every time.</p>
+          </div>
           <div className="highlights-grid">
             <div className="highlight-card">
+              <span className="highlight-number">01</span>
               <div className="highlight-icon">🌾</div>
               <h3>Deep Product Knowledge</h3>
               <p>
@@ -36,6 +35,7 @@ const Home = () => {
               </p>
             </div>
             <div className="highlight-card">
+              <span className="highlight-number">02</span>
               <div className="highlight-icon">⚡</div>
               <h3>Operational Excellence</h3>
               <p>
@@ -44,6 +44,7 @@ const Home = () => {
               </p>
             </div>
             <div className="highlight-card">
+              <span className="highlight-number">03</span>
               <div className="highlight-icon">🤝</div>
               <h3>Trust Through Execution</h3>
               <p>
@@ -52,6 +53,7 @@ const Home = () => {
               </p>
             </div>
             <div className="highlight-card">
+              <span className="highlight-number">04</span>
               <div className="highlight-icon">📋</div>
               <h3>Process-Driven</h3>
               <p>
@@ -65,47 +67,77 @@ const Home = () => {
 
       {/* Products Preview */}
       <section className="products-preview">
+        <div className="products-preview-pattern" aria-hidden="true" />
         <div className="container">
-          <h2 className="section-title">Our Core Products</h2>
+          <div className="products-preview-header">
+            <span className="products-preview-badge">What We Export</span>
+            <h2 className="products-preview-title">Our Core Products</h2>
+            <p className="products-preview-subtitle">Commodities sourced with care, delivered with precision—from farm to global markets.</p>
+          </div>
           <div className="products-grid">
-            <div className="product-card">
-              <div className="product-icon">
-                <img src={`${process.env.PUBLIC_URL}/images/product/rice.png`} alt="Rice" />
+            <div className="product-card product-card-featured">
+              <div className="product-card-accent" />
+              <div className="product-icon-wrap">
+                <div className="product-icon-ring" />
+                <div className="product-icon">
+                  <img src={`${process.env.PUBLIC_URL}/images/product/rice.png`} alt="Rice" />
+                </div>
               </div>
               <h3>Rice</h3>
               <p>Premium quality rice exports with strict quality control and reliable delivery schedules.</p>
+              <span className="product-tag">Staple</span>
             </div>
             <div className="product-card">
-              <div className="product-icon">
-                <img src={`${process.env.PUBLIC_URL}/images/product/cotton.png`} alt="Cotton" />
+              <div className="product-card-accent" />
+              <div className="product-icon-wrap">
+                <div className="product-icon-ring" />
+                <div className="product-icon">
+                  <img src={`${process.env.PUBLIC_URL}/images/product/cotton.png`} alt="Cotton" />
+                </div>
               </div>
               <h3>Cotton</h3>
               <p>Expertise in cotton ginning and pressing, ensuring superior quality and consistency.</p>
+              <span className="product-tag">Textile</span>
             </div>
             <div className="product-card">
-              <div className="product-icon">
-                <img src={`${process.env.PUBLIC_URL}/images/product/maize.png`} alt="Maize" />
+              <div className="product-card-accent" />
+              <div className="product-icon-wrap">
+                <div className="product-icon-ring" />
+                <div className="product-icon">
+                  <img src={`${process.env.PUBLIC_URL}/images/product/maize.png`} alt="Maize" />
+                </div>
               </div>
               <h3>Maize</h3>
               <p>High-grade maize supplied based on buyer requirements and market conditions.</p>
+              <span className="product-tag">Grain</span>
             </div>
             <div className="product-card">
-              <div className="product-icon">
-                <img src={`${process.env.PUBLIC_URL}/images/product/wheat.png`} alt="Wheat" />
+              <div className="product-card-accent" />
+              <div className="product-icon-wrap">
+                <div className="product-icon-ring" />
+                <div className="product-icon">
+                  <img src={`${process.env.PUBLIC_URL}/images/product/wheat.png`} alt="Wheat" />
+                </div>
               </div>
               <h3>Wheat</h3>
               <p>Quality wheat exports meeting international standards and specifications.</p>
+              <span className="product-tag">Grain</span>
             </div>
             <div className="product-card">
-              <div className="product-icon">
-                <img src={`${process.env.PUBLIC_URL}/images/product/sugar.png`} alt="Sugar" />
+              <div className="product-card-accent" />
+              <div className="product-icon-wrap">
+                <div className="product-icon-ring" />
+                <div className="product-icon">
+                  <img src={`${process.env.PUBLIC_URL}/images/product/sugar.png`} alt="Sugar" />
+                </div>
               </div>
               <h3>Sugar</h3>
               <p>Premium sugar exports with proper handling and storage management.</p>
+              <span className="product-tag">Sweetener</span>
             </div>
           </div>
-          <div className="text-center" style={{ marginTop: '2rem' }}>
-            <Link to="/products" className="btn btn-outline">
+          <div className="products-preview-cta">
+            <Link to="/products" className="btn btn-products">
               View All Products
             </Link>
           </div>

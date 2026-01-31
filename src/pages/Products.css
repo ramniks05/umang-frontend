@@ -6,7 +6,7 @@
 .products-hero {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: white;
-  padding: 5rem 0;
+  padding: 3.25rem 0;
   text-align: center;
 }
 
@@ -27,14 +27,14 @@
 
 /* Products Section */
 .products-section {
-  padding: 5rem 0;
+  padding: 3.25rem 0;
   background: white;
 }
 
 .products-list {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .product-detail-card {
@@ -150,7 +150,7 @@
 
 /* Products Approach */
 .products-approach {
-  padding: 5rem 0;
+  padding: 3.25rem 0;
   background: var(--bg-light);
 }
 
@@ -177,8 +177,8 @@
 .philosophy-points {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .philosophy-point {
@@ -207,7 +207,7 @@
 
 /* Products CTA */
 .products-cta {
-  padding: 5rem 0;
+  padding: 3.25rem 0;
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: white;
 }
@@ -262,19 +262,27 @@
 @media (max-width: 768px) {
   .page-title {
     font-size: 2rem;
+    text-align: center;
   }
 
   .page-subtitle {
     font-size: 1.1rem;
+    text-align: center;
   }
 
   .product-detail-card {
     padding: 2rem;
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
   }
 
   .product-header {
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .product-header h2 {
@@ -284,19 +292,52 @@
   .product-icon-large {
     width: 80px;
     height: 80px;
-    font-size: 3rem;
+    margin: 0 auto;
+  }
+
+  .product-description {
+    text-align: center;
+  }
+
+  .product-features {
+    text-align: center;
+  }
+
+  .product-features h3 {
+    text-align: center;
   }
 
   .product-features ul {
     grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: left;
+  }
+
+  .product-enquiry-actions {
+    justify-content: center;
   }
 
   .philosophy-points {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .philosophy-point {
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
   }
 
   .approach-content h2,
   .cta-content h2 {
     font-size: 2rem;
+    text-align: center;
+  }
+
+  .approach-content,
+  .cta-content {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

@@ -34,7 +34,7 @@ const Contact = () => {
     setSubmitStatus(null);
 
     // Build WhatsApp message
-    const whatsappNumber = '919999999999'; // TODO: replace with your official WhatsApp number
+    const whatsappNumber = '919922833338';
     const text = `
 Enquiry from Exobase website
 
@@ -176,8 +176,8 @@ ${formData.message}
                     <div className="info-icon">📍</div>
                     <div className="info-content">
                       <h3>Location</h3>
-                      <p>India-based Export House</p>
-                      <p>Agri & Natural Commodities Sector</p>
+                      <p>Tata Capitol Heights, Tower 4, Room 1202,</p>
+                      <p>Rambagh, Near VR Mall, Nagpur, Maharashtra – 440003</p>
                     </div>
                   </div>
 
@@ -185,8 +185,7 @@ ${formData.message}
                     <div className="info-icon">📧</div>
                     <div className="info-content">
                       <h3>Email</h3>
-                      <p>info@exobase.com</p>
-                      <p>sales@exobase.com</p>
+                      <p>info@exobase.in</p>
                     </div>
                   </div>
 
@@ -194,8 +193,7 @@ ${formData.message}
                     <div className="info-icon">📞</div>
                     <div className="info-content">
                       <h3>Phone</h3>
-                      <p>+91 XXX XXX XXXX</p>
-                      <p>+91 XXX XXX XXXX</p>
+                      <p>+91 99228-33338</p>
                     </div>
                   </div>
 

@@ -6,7 +6,7 @@
 .contact-hero {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: white;
-  padding: 5rem 0;
+  padding: 3.25rem 0;
   text-align: center;
 }
 
@@ -27,14 +27,14 @@
 
 /* Contact Section */
 .contact-section {
-  padding: 5rem 0;
+  padding: 3.25rem 0;
   background: white;
 }
 
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 4rem;
+  gap: 2.5rem;
   align-items: start;
 }
 
@@ -194,7 +194,7 @@
 
 /* Additional Info */
 .contact-additional {
-  padding: 5rem 0;
+  padding: 3.25rem 0;
   background: var(--bg-light);
 }
 
@@ -221,32 +221,74 @@
   .contact-wrapper {
     grid-template-columns: 1fr;
     gap: 3rem;
+    text-align: center;
   }
 
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    margin: 0 auto;
+  }
+
+  .info-items {
+    align-items: center;
+  }
+
+  .info-item {
+    justify-content: center;
   }
 }
 
 @media (max-width: 768px) {
   .page-title {
     font-size: 2rem;
+    text-align: center;
   }
 
   .page-subtitle {
     font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .contact-wrapper {
+    text-align: center;
+  }
+
+  .contact-form-container {
+    margin: 0 auto;
+    max-width: 100%;
   }
 
   .contact-form-container h2,
   .contact-info h2 {
     font-size: 1.75rem;
+    text-align: center;
   }
 
   .contact-info {
     padding: 2rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .info-description {
+    text-align: center;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .additional-content {
+    text-align: center;
   }
 
   .additional-content h2 {
     font-size: 2rem;
+    text-align: center;
   }
 }

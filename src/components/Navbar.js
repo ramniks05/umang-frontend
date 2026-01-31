@@ -23,13 +23,13 @@ const Navbar = () => {
       <div className="top-header">
         <div className="top-header-container">
           <div className="top-header-info">
-            <a href="tel:+91XXXXXXXXXX" className="top-header-item">
+            <a href="tel:+919922833338" className="top-header-item">
               <span className="top-header-icon">📞</span>
-              <span>+91 XXX XXX XXXX</span>
+              <span>+91 99228-33338</span>
             </a>
-            <a href="mailto:info@exobase.com" className="top-header-item">
+            <a href="mailto:info@exobase.in" className="top-header-item">
               <span className="top-header-icon">📧</span>
-              <span>info@exobase.com</span>
+              <span>info@exobase.in</span>
             </a>
           </div>
         </div>

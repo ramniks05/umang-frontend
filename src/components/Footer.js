@@ -106,27 +106,27 @@ const Footer = () => {
             <h4>Contact Info</h4>
             <div className="contact-item">
               <span className="contact-icon">📍</span>
-              <p>India-based Export House<br />Agri & Natural Commodities</p>
+              <p>Tata Capitol Heights, Tower 4, Room 1202,<br />Rambagh, Near VR Mall, Nagpur, Maharashtra – 440003</p>
             </div>
             <div className="contact-item">
               <span className="contact-icon">📧</span>
-              <p>info@exobase.com<br />sales@exobase.com</p>
+              <p>info@exobase.in</p>
             </div>
             <div className="contact-item">
               <span className="contact-icon">📞</span>
-              <p>+91 XXX XXX XXXX<br />+91 XXX XXX XXXX</p>
+              <p>+91 99228-33338</p>
             </div>
             <div className="map-container">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.595615355453!2d72.8776559!3d19.0759837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9d90d9ddc9f%3A0x9dc5b5e5b5e5b5e5!2sMumbai%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14895.053!2d79.087656!3d21.128934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c72a2a2a2a2a%3A0x2a2a2a2a2a2a2a2a!2sRambagh%2C%20Nagpur%2C%20Maharashtra%20440003!5e0!3m2!1sen!2sin!4v1706544000!5m2!1sen!2sin"
                 width="100%"
                 height="120"
-                style={{ border: 0, borderRadius: '8px' }}
+                style={{ border: 0, borderRadius: '8px', minHeight: '120px' }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Exobase Location"
-              ></iframe>
+              />
             </div>
           </div>
         </div>
