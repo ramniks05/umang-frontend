@@ -16,8 +16,8 @@ Write-Host "Initializing git repository..."
 git init
 
 # Add remote (ignore error if already added)
-git remote add origin https://github.com/ramniks05/umang-frontend.git 2>$null
-if (-not $?) { git remote set-url origin https://github.com/ramniks05/umang-frontend.git }
+git remote add origin https://github.com/dilitalcreatorss-design/umang-frontend.git 2>$null
+if (-not $?) { git remote set-url origin https://github.com/dilitalcreatorss-design/umang-frontend.git }
 
 # Stage all files
 Write-Host "Staging files..."
@@ -32,4 +32,4 @@ git branch -M main
 Write-Host "Pushing to GitHub..."
 git push -u origin main
 
-Write-Host "Done! Repository: https://github.com/ramniks05/umang-frontend"
+Write-Host "Done! Repository: https://github.com/dilitalcreatorss-design/umang-frontend"
