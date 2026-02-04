@@ -8,11 +8,16 @@ const Home = () => {
     <main className="home">
       {/* Hero Section */}
       <section className="hero">
-        <img 
-          src={`${process.env.PUBLIC_URL}/images/export-banner.png`}
-          alt="Export Banner"
-          className="hero-banner-image"
-        />
+        <video
+          className="hero-banner-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+          aria-label="Hero banner"
+        >
+          <source src={`${process.env.PUBLIC_URL}/images/herobannervideo.mp4`} type="video/mp4" />
+        </video>
       </section>
 
       {/* Key Highlights */}
