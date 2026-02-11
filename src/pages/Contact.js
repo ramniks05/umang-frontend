@@ -65,6 +65,14 @@ ${formData.message}
             Get in touch with us to discuss your requirements, specifications, and delivery timelines. 
             We're here to provide honest communication and reliable execution.
           </p>
+          <a
+            href="https://wa.me/919922833338"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-hero-whatsapp"
+          >
+            WhatsApp: +91 99228 33338 <span className="fast-response">(Fast Response)</span>
+          </a>
         </div>
       </section>
 
@@ -172,6 +180,19 @@ ${formData.message}
                 </p>
 
                 <div className="info-items">
+                  <a
+                    href="https://wa.me/919922833338"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="info-item info-item-whatsapp"
+                  >
+                    <div className="info-icon info-icon-whatsapp">💬</div>
+                    <div className="info-content">
+                      <h3>WhatsApp: +91 99228 33338</h3>
+                      <p className="info-whatsapp-tag">Fast Response</p>
+                    </div>
+                  </a>
+
                   <div className="info-item">
                     <div className="info-icon">📍</div>
                     <div className="info-content">
@@ -193,7 +214,7 @@ ${formData.message}
                     <div className="info-icon">📞</div>
                     <div className="info-content">
                       <h3>Phone</h3>
-                      <p>+91 99228-33338</p>
+                      <p>+91 99228 33338</p>
                     </div>
                   </div>
 
@@ -208,21 +229,6 @@ ${formData.message}
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Info */}
-      <section className="contact-additional">
-        <div className="container">
-          <div className="additional-content">
-            <h2>Our Commitment</h2>
-            <p>
-              When you contact us, you can expect straightforward communication about specifications, 
-              timelines, and documentation. We discuss requirements early and align them with what can 
-              actually be executed. Where inspections or certifications are required, we coordinate them 
-              with a clear understanding of both buyer expectations and on-ground realities.
-            </p>
           </div>
         </div>
       </section>

@@ -16,8 +16,7 @@ const Footer = () => {
               />
             </div>
             <p className="footer-description">
-              An India-based export house operating in the agri and natural commodities sector, 
-              built on businesses that deal with material, processes, and scale.
+              An India-based export house with strong roots in cotton ginning, agri commodities, and global trade.
             </p>
             <div className="social-media">
               <h4>Follow Us</h4>

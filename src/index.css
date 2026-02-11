@@ -11,14 +11,17 @@ html {
 body {
   margin: 0 auto;
   max-width: 100vw;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #333;
-  line-height: 1.6;
+  color: var(--text-dark);
+  line-height: var(--line-height-body);
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  line-height: var(--line-height-tight);
 }
 
 code {
@@ -37,4 +40,15 @@ code {
   --bg-light: #f8f9fa;
   --white: #ffffff;
   --shadow: rgba(0, 75, 125, 0.1);
+
+  /* Section spacing – one place to tune */
+  --section-space: 4rem;
+  --section-space-md: 3.25rem;
+  --section-space-sm: 2.5rem;
+  --section-gap: 1.5rem;
+
+  /* Typography – consistent Inter */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --line-height-body: 1.6;
+  --line-height-tight: 1.35;
 }

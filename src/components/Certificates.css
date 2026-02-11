@@ -1,5 +1,5 @@
 .certificates {
-  padding: 3.5rem 0;
+  padding: var(--section-space) 0;
   background: linear-gradient(180deg, #fafbfc 0%, #f0f7fc 50%, #ffffff 100%);
 }
 
@@ -315,6 +315,10 @@
 }
 
 @media (max-width: 768px) {
+  .certificates {
+    padding: var(--section-space-sm) 0;
+  }
+
   .certificates .section-title {
     font-size: 2rem;
     text-align: center;

@@ -2,7 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Products.css';
 
+/* Generic specification items shown as "On Request" to build buyer confidence */
+const SPECIFICATIONS_ON_REQUEST = [
+  'Moisture %',
+  'Quality parameters',
+  'Packaging options',
+  'Origin',
+];
+
 const Products = () => {
+  /* Product images: replace with real photos (e.g. /images/product/rice-warehouse.jpg) when ready. Same .product-image-wrap layout supports bags, loading, stock. */
   const products = [
     {
       id: 1,
@@ -86,14 +95,23 @@ const Products = () => {
             {products.map((product) => (
               <div key={product.id} className="product-detail-card">
                 <div className="product-header">
-                  <div className="product-icon-large">
+                  {/* Product image: replace src with warehouse/stock photo when available */}
+                  <div className="product-icon-large product-image-wrap">
                     <img src={product.image} alt={product.name} />
                   </div>
                   <h2>{product.name}</h2>
                 </div>
                 <p className="product-description">{product.description}</p>
+                <div className="product-specs-on-request">
+                  <h3>Specifications (On Request)</h3>
+                  <ul>
+                    {SPECIFICATIONS_ON_REQUEST.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
                 <div className="product-features">
-                  <h3>Key Features:</h3>
+                  <h3>Key Features</h3>
                   <ul>
                     {product.features.map((feature, index) => (
                       <li key={index}>
@@ -110,7 +128,7 @@ const Products = () => {
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-whatsapp"
+                    className="btn btn-whatsapp btn-whatsapp-primary"
                   >
                     WhatsApp Enquiry
                   </a>
@@ -164,9 +182,9 @@ const Products = () => {
               Contact us to discuss your requirements, specifications, and delivery timelines. 
               We're here to provide honest communication and reliable execution.
             </p>
-            <a href="/contact" className="btn btn-primary btn-large">
+            <Link to="/contact" className="btn btn-primary btn-large">
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </section>

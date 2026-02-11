@@ -11,7 +11,7 @@ main {
   width: 100%;
 }
 
-/* Global container - centered content */
+/* Global container – consistent max-width and padding */
 .container {
   max-width: 1200px;
   margin-left: auto;
@@ -21,6 +21,12 @@ main {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
   .container {
     padding: 0 1rem;
   }

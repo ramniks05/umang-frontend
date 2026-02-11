@@ -2,7 +2,7 @@
   background: linear-gradient(135deg, var(--secondary-color) 0%, #003a5f 100%);
   color: white;
   margin-top: auto;
-  padding: 3rem 0 1rem;
+  padding: var(--section-space-md) 0 1rem;
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
@@ -224,7 +224,7 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: 2.5rem 0 1rem;
+    padding: var(--section-space-sm) 0 1rem;
   }
 
   .footer-content {

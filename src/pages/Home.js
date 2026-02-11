@@ -1,23 +1,62 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Certificates from '../components/Certificates';
 import './Home.css';
 
+const HERO_SLIDES = [
+  { src: 'hero-slide-1.png', alt: 'Agricultural commodity handling and logistics' },
+  { src: 'hero-slide-2.png', alt: 'Cotton and commodity export operations' },
+];
+
+/* Same slots as About: replace with real photos (warehouse, cotton yard, container loading, office/team) */
+const GLIMPSES_IMAGES = [
+  { id: 'warehouse', title: 'Warehouse', alt: 'Our warehouse and storage operations', src: 'operations/warehouse.png', fallback: 'operations/placeholder.svg' },
+  { id: 'cotton-yard', title: 'Cotton Yard', alt: 'Cotton yard and ginning operations', src: 'operations/cotton-yard.png', fallback: 'operations/placeholder.svg' },
+  { id: 'container-loading', title: 'Container Loading', alt: 'Container loading and logistics', src: 'operations/container-loading.png', fallback: 'operations/placeholder.svg' },
+  { id: 'office-team', title: 'Office & Team', alt: 'Our office and team', src: 'operations/office-team.png', fallback: 'operations/placeholder.svg' },
+];
+
 const Home = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <main className="home">
-      {/* Hero Section */}
-      <section className="hero">
-        <video
-          className="hero-banner-video"
-          autoPlay
-          loop
-          muted
-          playsInline
-          aria-label="Hero banner"
-        >
-          <source src={`${process.env.PUBLIC_URL}/images/herobannervideo.mp4`} type="video/mp4" />
-        </video>
+      {/* Hero Section - Image slider */}
+      <section className="hero" aria-label="Hero banner">
+        <div className="hero-slider">
+          {HERO_SLIDES.map((slide, index) => (
+            <div
+              key={slide.src}
+              className={`hero-slide ${index === activeSlide ? 'hero-slide-active' : ''}`}
+              aria-hidden={index !== activeSlide}
+            >
+              <img
+                src={`${process.env.PUBLIC_URL}/images/${slide.src}`}
+                alt={slide.alt}
+                className="hero-slide-image"
+              />
+            </div>
+          ))}
+        </div>
+        <div className="hero-slider-dots" aria-label="Slide navigation">
+          {HERO_SLIDES.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              className={`hero-slider-dot ${index === activeSlide ? 'hero-slider-dot-active' : ''}`}
+              aria-label={`Go to slide ${index + 1}`}
+              aria-current={index === activeSlide ? 'true' : undefined}
+              onClick={() => setActiveSlide(index)}
+            />
+          ))}
+        </div>
       </section>
 
       {/* Key Highlights */}
@@ -31,7 +70,6 @@ const Home = () => {
           </div>
           <div className="highlights-grid">
             <div className="highlight-card">
-              <span className="highlight-number">01</span>
               <div className="highlight-icon">🌾</div>
               <h3>Deep Product Knowledge</h3>
               <p>
@@ -40,7 +78,6 @@ const Home = () => {
               </p>
             </div>
             <div className="highlight-card">
-              <span className="highlight-number">02</span>
               <div className="highlight-icon">⚡</div>
               <h3>Operational Excellence</h3>
               <p>
@@ -49,7 +86,6 @@ const Home = () => {
               </p>
             </div>
             <div className="highlight-card">
-              <span className="highlight-number">03</span>
               <div className="highlight-icon">🤝</div>
               <h3>Trust Through Execution</h3>
               <p>
@@ -58,12 +94,19 @@ const Home = () => {
               </p>
             </div>
             <div className="highlight-card">
-              <span className="highlight-number">04</span>
               <div className="highlight-icon">📋</div>
               <h3>Process-Driven</h3>
               <p>
                 From sourcing to shipment coordination, we follow practical processes 
                 that ensure consistency and reliability at scale.
+              </p>
+            </div>
+            <div className="highlight-card">
+              <div className="highlight-icon">🏭</div>
+              <h3>Ground-Level Experience</h3>
+              <p>
+                Ground-level experience in cotton and agri commodities with decades of 
+                hands-on operational knowledge—from field to port.
               </p>
             </div>
           </div>
@@ -145,6 +188,34 @@ const Home = () => {
             <Link to="/products" className="btn btn-products">
               View All Products
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Glimpses – image slots for real warehouse, cotton yard, container loading, office/team */}
+      <section className="glimpses-section" aria-label="Glimpses of our operations">
+        <div className="container">
+          <h2 className="section-title">Glimpses of Our Operations</h2>
+          <p className="glimpses-intro">
+            From warehouse and yard to loading and office—see where we work.
+          </p>
+          <div className="glimpses-grid">
+            {GLIMPSES_IMAGES.map((item) => (
+              <figure key={item.id} className="glimpses-photo">
+                <div className="glimpses-photo-frame">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/images/${item.src}`}
+                    alt={item.alt}
+                    className="glimpses-photo-img"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = `${process.env.PUBLIC_URL}/images/${item.fallback}`;
+                    }}
+                  />
+                </div>
+                <figcaption className="glimpses-photo-caption">{item.title}</figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>

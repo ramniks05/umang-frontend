@@ -55,7 +55,7 @@ const Certificates = () => {
       <section className="certificates">
         <div className="container">
           <div className="certificates-header">
-            <h2 className="section-title">Our Certifications</h2>
+            <h2 className="section-title">Our Certifications & Compliance</h2>
             <p className="section-subtitle">
               We maintain the highest standards of quality, compliance, and operational excellence. 
               Our certifications reflect our commitment to meeting international standards and regulatory requirements.

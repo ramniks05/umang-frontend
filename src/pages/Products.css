@@ -6,7 +6,7 @@
 .products-hero {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: white;
-  padding: 3.25rem 0;
+  padding: var(--section-space-md) 0;
   text-align: center;
 }
 
@@ -27,7 +27,7 @@
 
 /* Products Section */
 .products-section {
-  padding: 3.25rem 0;
+  padding: var(--section-space-md) 0;
   background: white;
 }
 
@@ -85,7 +85,56 @@
   font-size: 1.1rem;
   color: var(--text-light);
   line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* Specifications (On Request) – future-ready for product photos in .product-image-wrap */
+.product-image-wrap {
+  overflow: hidden;
+  border-radius: 12px;
+}
+.product-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-specs-on-request {
   margin-bottom: 2rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-light);
+  border-radius: 10px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.product-specs-on-request h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 0.75rem;
+  text-transform: none;
+}
+
+.product-specs-on-request ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.product-specs-on-request li {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  padding-left: 1rem;
+  position: relative;
+}
+.product-specs-on-request li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
 }
 
 .product-features h3 {
@@ -123,17 +172,26 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  align-items: center;
 }
 
-.btn-whatsapp {
+/* WhatsApp Enquiry – primary action, kept clearly visible */
+.btn-whatsapp,
+.btn-whatsapp-primary {
   background: #25d366;
-  border-color: #25d366;
+  border: 2px solid #25d366;
   color: white;
+  font-weight: 600;
+  order: -1;
 }
 
-.btn-whatsapp:hover {
+.btn-whatsapp:hover,
+.btn-whatsapp-primary:hover {
   background: #1eb055;
   border-color: #1eb055;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
 }
 
 .btn-outline-enquiry {
@@ -150,7 +208,7 @@
 
 /* Products Approach */
 .products-approach {
-  padding: 3.25rem 0;
+  padding: var(--section-space-md) 0;
   background: var(--bg-light);
 }
 
@@ -207,7 +265,7 @@
 
 /* Products CTA */
 .products-cta {
-  padding: 3.25rem 0;
+  padding: var(--section-space) 0;
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: white;
 }
@@ -260,6 +318,13 @@
 }
 
 @media (max-width: 768px) {
+  .products-hero,
+  .products-section,
+  .products-approach,
+  .products-cta {
+    padding: var(--section-space-sm) 0;
+  }
+
   .page-title {
     font-size: 2rem;
     text-align: center;
